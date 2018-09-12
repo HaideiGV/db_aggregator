@@ -22,7 +22,7 @@ cursor.execute(
 )
 
 cursor.execute(
-    "CREATE TABLE last_processed_id (id integer);"
+    "CREATE TABLE last_processed_id (processed_id integer primary key);"
 )
 
 conn.commit()
