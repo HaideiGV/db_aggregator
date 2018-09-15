@@ -1,11 +1,17 @@
-pip install -r requirements.txt
+For running scripts you should install dependencies with next command:
+`pip install -r requirements.txt`
 
-DB creating - `python db_create.py`
+DB create script run command - `python db_create.py`:
+    Script creates 3 tables `raw_data`, `agg_data`, `last_processed_id`
 
-DB filling - `python db_fill.py`
+DB fill script run command  - `python db_fill.py`:
+    Fill raw_data tables with test data.
 
-DB clear - `python db_drop.py`
+DB drop script run command  - `python db_drop.py`:
+    Can drop tables if it needed.
 
-DB aggregate - `python db_aggregator.py`
+DB aggregate script run command - `python db_aggregate.py`:
+    Fill agg_data with aggregated data from raw_data.
 
-DB validate - `python db_validate.py`
+DB validate script run command - `python db_validate.py`:
+    Check if aggregated data is valid.
