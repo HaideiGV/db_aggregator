@@ -45,7 +45,7 @@ if user_ids:
             f"SELECT event_id, min(amount) as worst "
             f"FROM raw_data where user_id = {user_id} "
             f"GROUP BY event_id "
-            f"ORDER by worst asc "
+            f"ORDER by worst desc "
             f"LIMIT 1;"
         )
         worst_event_id, worst_event_value = cursor.fetchone()
